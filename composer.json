@@ -1,0 +1,24 @@
+{
+    "name": "pixelrank/laravel-vuexy-crud-generator",
+    "description": "Creates a basic skeleton for a CRUD app in both Laravel & Vue.js single file components.",
+    "authors": [
+        {
+            "name": "Bilal Arshad",
+            "email": "bilalarshad21041@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "lummy\\": "src/"
+        }
+    },
+    "extra": {
+    "laravel": {
+          "providers": [
+              "lummy\\vueApi\\vueApiServiceProvider"
+          ]
+    }
+  }
+}
