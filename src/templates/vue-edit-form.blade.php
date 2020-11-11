@@ -13,9 +13,7 @@
                   
             @if($field['simplified_type'] == 'text' && $field['name'] != 'id')
             <vs-input class="w-full mt-4" label="{{ $field['name'] }}" v-model="data_local.{{ $field['name'] }}" type="text" v-validate="required|{{ $field["name"] }}" name="{{ $field['name'] }}" />
-             <span class="text-danger text-sm" v-show="errors.has('@php echo $field['name']@endphp')">{{
-                              errors.first("{{ $field['name'] }}")
-                            }}</span>
+            <span class="text-danger text-sm" v-show="errors.has('@php echo $field['name']@endphp')">{{errors.first('@php echo $field['name']@endphp') }}</span>
             @endif
             @if($field['simplified_type'] == 'number' && $field['name'] != 'created_at' && $field['name'] != 'updated_at' && $field['name'] != 'id')
             @if($field['type'] == 'tinyint')
